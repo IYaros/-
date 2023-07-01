@@ -1,3 +1,5 @@
+!pip install pandas lightgbm Pillow streamlit
+
 
 import streamlit as st
 import pandas as pd
