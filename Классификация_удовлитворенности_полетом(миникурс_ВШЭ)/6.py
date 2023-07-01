@@ -6,7 +6,7 @@ import pandas as pd
 import lightgbm as lgb
 from PIL import Image
 # Загрузка данных и обучение модели
-df = pd.read_csv("C:/Users/iyaro/OneDrive/Документы/-/Классификация_удовлитворенности_полетом(миникурс_ВШЭ)/data/df_features.csv")
+df = pd.read_csv("data/df_features.csv")
 
 # Map categorical features to integers
 df['gender'] = df['gender'].map({'Male': 0, 'Female': 1})
@@ -30,7 +30,7 @@ model = lgb.LGBMClassifier(boosting_type='dart', learning_rate=0.2, n_estimators
 model.fit(X, y)
 
 # Заголовок и описание приложения
-image = Image.open("C:/Users/iyaro/OneDrive/Документы/-/Классификация_удовлитворенности_полетом(миникурс_ВШЭ)/data/8.jpg")
+image = Image.open("data/8.jpg")
 st.image(image)
 st.write(
         """
